@@ -8,15 +8,18 @@
 # ✨ Ejercicio 1: Lista de la compra
 # Crea una lista con al menos 5 elementos. Muestra el primero y el último elemento.
 
-lista = ["dowon", "jaeil", "sabi", "namkyung", "yiyoung"]
+lista = ["Leche", "Pan", "Huevos", "Galletas", "Queso"]
 print("El primer elemento de la lista es " + lista[0] + " y el último elemento es " + lista[4])
+
 
 
 # ✨ Ejercicio 2: Añadir y eliminar
 # Añade un nuevo elemento a la lista anterior y elimina otro. Imprime la lista actualizada.
-lista.append("ikjun")
-lista.remove("sabi")
+
+lista.append("Fruta")
+lista.remove("Pan")
 print("La lista actualizada queda como: ", lista)
+
 
 
 # ✨ Ejercicio 3: Ordenar números
@@ -25,7 +28,6 @@ print("La lista actualizada queda como: ", lista)
 random = [2, 6 , 8, 21, 25, 5, 9, 26, 27, 18]
 random.sort()
 print("La lista ordenada queda así ", random)
-
 
 
 # ------------------------------
@@ -39,13 +41,13 @@ coordenada = (127,23)
 print(coordenada)
 
 
+
 # ✨ Ejercicio 5: Elemento fijo
 # Crea una tupla de 3 elementos. Intenta cambiar uno y observa qué sucede.
 
 fijo = ("azul", "rojo", "amarillo")
 #fijo[0] = "verde"
 print(fijo)
-
 
 
 # ------------------------------
@@ -62,14 +64,15 @@ diccionario = {
 }
 print(diccionario)
 
+
+
 # ✨ Ejercicio 7: Actualizar valores
 # Cambia el valor de ciudad y añade una nueva clave llamada email.
 
-
 diccionario["pueblo"] = "Sama"
-diccionario["hobbie"] = "Escuchar música"
-
+diccionario["hobbie"] = "Leer"
 print(diccionario)
+
 
 
 # ✨ Ejercicio 8: Iterar claves y valores
@@ -77,6 +80,7 @@ print(diccionario)
 
 for clave, valor in diccionario.items():
     print(clave + ":", valor)
+
 
 
 # ------------------------------
@@ -87,18 +91,16 @@ for clave, valor in diccionario.items():
 # ✨ Ejercicio 9: Eliminar duplicados
 # A partir de una lista con nombres repetidos, crea un set para mostrar solo los nombres únicos.
 
-names = {"chanyeol", "chanyeol", "suho", "kai", "do", "chen", "baekhyun", "suho", "sehun", "lay", "xiumin", "kai"}
+names = {"Saray", "Saray", "Jose", "Diego", "Lorena", "Jennifer", "Diego", "Sergio", "Ana", "Sergio", "Nicolás", "Noemí"}
 print(names)
 
 
 # ✨ Ejercicio 10: Operaciones de conjuntos
 # Dado dos sets A y B, muestra qué elementos están en A pero no en B.
 
-
-setA = { "chanyeol", "suho", "kai", "do", "chen","baekhyun"}
-setB = {"do", "chen","baekhyun"}
+setA = { "Saray", "Lorena", "Ana", "Diego", "Jose","Rubén"}
+setB = {"Diego", "Jose","Rubén"}
   
-#diferencia = setA - setB
 diferencia = setA.difference(setB)
 print("Los nombres que salen en setA y no en setB son: ", diferencia)
 
@@ -107,9 +109,9 @@ print("Los nombres que salen en setA y no en setB son: ", diferencia)
 # Añade un nuevo hobby a una persona y muestra todos los hobbies de otra.
 
 personas = {
-    "saray" : ["leer", "escuchar musica", "kdramas"],
-    "chanyeol" : ["tocar la guitarra", "ver one piece", "pasear con zzar"]
+    "Saray" : ["leer", "escuchar musica", "kdramas"],
+    "Lorena" : ["dormir", "ir al gimnasio", "videojuegos"]
 }  
 personas["saray"].append("dormir") 
-print("Los hobbies de Saray son: ", personas["saray"])
-print("Los hobbies de Chanyeol son: ", personas["chanyeol"])
+print("Los hobbies de Saray son: ", personas["Saray"])
+print("Los hobbies de Lorena son: ", personas["Lorena"])

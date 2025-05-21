@@ -77,7 +77,6 @@ def multiplicar(a, b):
 def dividir(a, b):
     division = a / b
 
-
 # ------------------------------
 # ✨ Ejercicio 7: Edad en el futuro
 # Objetivo: Usar return con operaciones
@@ -89,8 +88,6 @@ def edad_futura(edad_actual, años):
     return edad_f
 
 print(edad_futura(25, 10))  
-
-
 
 # ------------------------------
 # ✨ Ejercicio 8: Media de 3 números
@@ -117,6 +114,7 @@ def mostrar_menu():
     print("2. Editar perfil")
     print("3. Cerrar sesión")
 mostrar_menu()
+
 
 
 # ------------------------------

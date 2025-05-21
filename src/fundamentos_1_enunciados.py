@@ -25,12 +25,11 @@ type(c)
 type(d)
 type(e)
 
-print(type(a))
-print(type(b))
-print(type(c))
-print(type(d))
-print(type(e))
-
+print("🔍", type(a))
+print("🔍", type(b))
+print("🔍", type(c))
+print("🔍", type(d))
+print("🔍", type(e))
 
 # ✨ Ejercicio 2: Conversión rápida
 # Convierte la cadena "42" en número, súmale 8 y muestra el resultado.
@@ -40,10 +39,10 @@ print(type(e))
 
 cadena = "42"
 numero = int(cadena) + 8    
-print(numero)
+print("📈", numero)
 numero = 100
 cadena = str(numero)
-print("Tu puntuación final es: " + cadena)
+print("🏁 Tu puntuación final es: " + cadena)
 
 # ------------------------------
 # VARIABLES
@@ -56,7 +55,7 @@ print("Tu puntuación final es: " + cadena)
 
 nombre = "Marta"
 edad = 30
-print("Hola, me llamo " + nombre + " y tengo " + str(edad) + " años.")
+print("😊 Hola, me llamo " + nombre + " y tengo " + str(edad) + " años.")
 
 #print(f"Hola, {nombre}")
 
@@ -73,8 +72,8 @@ y = "perro"
 
 x, y = y, x
 
-print("x:", x)
-print("y:", y)  
+print("🐾 x:", x)
+print("🐾 y:", y)  
 
 
 # ------------------------------
@@ -92,17 +91,17 @@ pan = 1.20
 leche = 0.95
 huevos = 2.10
 total = pan + leche + huevos
-print("Te has gastado un total de: " + str(total) + "€ hoy en tu compra.")
+
+print("🛒 Te has gastado un total de: " + str(total) + "€ hoy en tu compra.")
 
 # ✨ Ejercicio 6: ¿Par o impar?
 # Pide al usuario un número con input() y di si es par o impar.
 
 numero = int(input("Introduce un número: "))
 if numero % 2 == 0:
-    print("El número es par.")  
+    print("🔵 El número es par.")
 else:
-    print("El número es impar.")
-
+    print("🔴 El número es impar.")
 # ------------------------------
 # ESTRUCTURAS DE CONTROL
 # ------------------------------
@@ -113,11 +112,11 @@ else:
 
 
 age = int(input("Dime tu edad: "))
-
 if age >= 18:
-    print("Puedes entrar.")
+    print("✅ Puedes entrar.")
 else:
-    print("Acceso denegado.")
+    print("🚫 Acceso denegado.")
+
 
 
 # ✨ Ejercicio 8: Elige una opción
@@ -130,13 +129,13 @@ else:
 
 choice = int(input("Elige una opción entre: 1, 2 y 3: "))
 if choice == 1:
-    print("Has elegido ver tu perfil.")
+    print("👀 Has elegido ver tu perfil.")
 elif choice == 2:
-    print("Has elegido editar tu perfil.")
+    print("🛠️ Has elegido editar tu perfil.")
 elif choice == 3:
-    print("Has elegido cerrar sesión.")
+    print("🔒 Has elegido cerrar sesión.")
 else:
-    print("No hay número para esa opción.")
+    print("❓ No hay número para esa opción.")
 
 
 # ------------------------------
@@ -154,18 +153,16 @@ else:
 
 
 mensaje = input("Escribe algo: ")
-
 try:
     dato = int(mensaje)
-    print("Has escrito un número entero")
-
+    print("🔢 Has escrito un número entero")
 except ValueError:
     if isinstance(mensaje, float):
-        print("Has escrito un número decimal")
+        print("🔣 Has escrito un número decimal")
     elif isinstance(mensaje, str):
-        print("Parece que es una cadena de texto")
+        print("✍️ Parece que es una cadena de texto")
     else:
-        print("No sé qué es esto")
+        print("😵‍💫 No sé qué es esto")
 
 
 # ------------------------------
@@ -181,23 +178,25 @@ except ValueError:
 # Según la opción elegida, haz la operación y muestra el resultado.
 # Bonus: si elige dividir y el segundo número es 0, muestra “No se puede dividir por cero”.
 
+numero1 = int(input(" 🔢 Introduce un número: "))
+numero2 = int(input(" 🔢 Introduce otro número: "))
 
-edad = int(input("Introduce tu edad: "))
-
-if edad < 3:
-    print("Eres un bebé.")
-elif edad >= 3 and edad <= 12:
-    print("Estás en la infancia.")
-elif edad >= 13 and edad <=17:
-    print("Estás en la adolescencia.")
-elif edad >= 18 and edad <=64:
-    print("Estás en la adultez")
-elif edad >= 64:
-    print("Estás en la vejez.")
-else:
-    print("No has introducida una edad válida.")
-
-
+menu = int(input("Escribe 1 para sumar, 2 para restar, 3 para multiplicar o 4 para dividir: "))
+if menu == 1:
+    operacion = numero1 + numero2
+    print("➕ El resultado de tu suma es: " + str(operacion))
+elif menu == 2:
+    operacion = numero1 - numero2
+    print("➖ El resultado de tu resta es: " + str(operacion))
+elif menu == 3:
+    operacion = numero1 * numero2
+    print("✖️ El resultado de tu multiplicación es: " + str(operacion))
+elif menu == 4:
+    if numero2 == 0:
+        print("🚫 No se puede dividir entre 0")
+    else:
+        operacion = numero1 / numero2
+        print("➗ El resultado de tu división es: " + str(operacion))
 
 
 # ------------------------------
@@ -212,24 +211,16 @@ else:
 # - Entre 18 y 64: “Adulto”
 # - 100 o más: “Senior”
 
-
-numero1 = int(input("Introduce un número: "))
-numero2 = int(input("Introduce otro número: "))
-
-menu = int(input("Escribe 1 para sumar, 2 para restar, 3 para multiplicar o 4 para dividir: "))
-if menu == 1:
-    operacion = numero1 + numero2
-    print("El resultado de tu suma es: " + operacion)
-elif menu == 2:
-    operacion = numero1 - numero2
-    print("El resultado de tu resta es: " + operacion) 
-elif menu == 3:
-    operacion = numero1 * numero2
-    print("El resultado de tu multiplicación es: " + operacion)
-elif menu == 4: 
-    if numero2 == 0:
-        print("No se puede dividir entre 0")
-    else:
-        operacion = numero1 / numero2
-        print("El resultado de tu division es: " + operacion)
-
+edad = int(input("🔢 Introduce tu edad: "))
+if edad < 3:
+    print("👶 Eres un bebé.")
+elif edad >= 3 and edad <= 12:
+    print("🧒 Estás en la infancia.")
+elif edad >= 13 and edad <= 17:
+    print("🧑‍🎓 Estás en la adolescencia.")
+elif edad >= 18 and edad <= 64:
+    print("🧑‍💼 Estás en la adultez")
+elif edad >= 64:
+    print("👴 Estás en la vejez.")
+else:
+    print("⚠️ No has introducida una edad válida.")
